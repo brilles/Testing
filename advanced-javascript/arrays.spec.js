@@ -10,8 +10,29 @@ const arrayFunctions = require('./arrays');
 describe('Arrays', () => {
   describe('map', () => {
     it('should be a function', () => {
-      const map = arrayFunctions.map;
+      const map = arrayFunctions.map([1, 2, 3, 4, 5], x => {
+        x + 2;
+      });
+
       expect(typeof map).toBe('object');
     });
+    it('should be a function', () => {
+      const map = arrayFunctions.map([1, 2, 3, 4, 5], x => {
+        x * 5;
+      });
+      expect(typeof map).toBe('object');
+    });
+    it('should be a function', () => {
+      const map = arrayFunctions.map([1, 2, 3, 4, 5], x => {
+        console.log(x);
+      });
+      expect(typeof map).toBe('object');
+    });
+  });
+  describe('flatten', () => {
+    it('should be a function', () => {
+      const flatten = arrayFunctions.flatten([1, [1, 2, 3]]);
+    });
+    expect(typeof flatten).toBe('object');
   });
 });
