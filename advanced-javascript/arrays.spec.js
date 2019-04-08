@@ -32,7 +32,7 @@ describe('Arrays', () => {
   describe('flatten', () => {
     it('should be a function', () => {
       const flatten = arrayFunctions.flatten([1, [1, 2, 3]]);
+      expect(typeof flatten).toBe('object');
     });
-    expect(typeof flatten).toBe('object');
   });
 });
